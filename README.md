@@ -6,11 +6,9 @@ Dieses Projekt ist ein objektorientiertes Java-Shop-System.
 Es besteht aus Produkten, Bestellungen und einem ShopService,
 der Bestellungen entgegennimmt und validiert.
 
-Das Projekt wurde nach folgenden Aufgabenstellungen umgesetzt:
 -------------------------------------------
-1. Projektstruktur
+1.1 Projektstruktur
 -------------------------------------------
-
 src/main/java/org.example/
 ├── Main.java
 ├── Product.java
@@ -24,9 +22,15 @@ src/main/java/org.example/
 src/test/java/org.example/
 └── ProductRepoTest.java
 -------------------------------------------
+1.2  Tests
+-------------------------------------------
+Im Projekt befindet sich eine Testklasse:
+- ProductRepoTest
+Diese Klasse überprüft die grundlegenden alle Funktionen des ProductRepo.
+
+-------------------------------------------
 1. Product und ProductRepo
 -------------------------------------------
-
 Product (Record):
 - id (int)
 - name (String)
@@ -43,7 +47,6 @@ ProductRepo:
 -------------------------------------------
 2. Order und OrderListRepo
 -------------------------------------------
-
 Order (Record):
 - id (int)
 - productName (String)
@@ -61,7 +64,6 @@ OrderListRepo:
 -------------------------------------------
 3. ShopService
 -------------------------------------------
-
 Der ShopService ermöglicht das Aufgeben neuer Bestellungen.
 
 Methoden:
@@ -75,7 +77,6 @@ Funktion:
 -------------------------------------------
 4. OrderRepoInterface
 -------------------------------------------
-
 Das Interface definiert die gemeinsamen Methoden aller Order-Repositories:
 
 Methoden:
@@ -87,7 +88,6 @@ Methoden:
 -------------------------------------------
 5. OrderMapRepo
 -------------------------------------------
-
 OrderMapRepo:
 - Implementiert OrderRepoInterface.
 - Speichert Bestellungen in einer HashMap (id → Order).
@@ -95,7 +95,6 @@ OrderMapRepo:
 -------------------------------------------
 6. Main-Klasse
 -------------------------------------------
-
 In der Main-Methode wird entschieden, welches Repository verwendet wird:
 
 Beispiel:
@@ -113,7 +112,6 @@ ShopService shop = new ShopService(productRepo, orderRepo);
 -------------------------------------------
 7. Projektziel
 -------------------------------------------
-
 Dieses Projekt demonstriert:
 
 - Objektorientierung
@@ -122,7 +120,6 @@ Dieses Projekt demonstriert:
 - Nutzung eines Interfaces zur Austauschbarkeit
 - Service-Schicht zur Geschäftslogik
 - Listen- und HashMap-basierte Datenhaltung
-
 ===========================================
 
 -geschrieben von Ahmed-
