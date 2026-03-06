@@ -7,7 +7,22 @@ Es besteht aus Produkten, Bestellungen und einem ShopService,
 der Bestellungen entgegennimmt und validiert.
 
 Das Projekt wurde nach folgenden Aufgabenstellungen umgesetzt:
+-------------------------------------------
+1. Projektstruktur
+-------------------------------------------
 
+src/main/java/org.example/
+├── Main.java
+├── Product.java
+├── ProductRepo.java
+├── Order.java
+├── OrderRepoInterface.java
+├── OrderListRepo.java
+├── OrderMapRepo.java
+└── ShopService.java
+
+src/test/java/org.example/
+└── ProductRepoTest.java
 -------------------------------------------
 1. Product und ProductRepo
 -------------------------------------------
