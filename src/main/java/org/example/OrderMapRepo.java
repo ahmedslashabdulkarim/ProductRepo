@@ -35,34 +35,3 @@ public class OrderMapRepo implements OrderRepoInterface {
         return List.copyOf(orders.values());
     }
 }
-
-
-/*
-public class OrderMapRepo implements OrderRepoInterface {
-
-    private final Map<Integer, Order> orders = new HashMap<>();
-
-    //Element hinzufügen
-    @Override
-    public void addOrder(Order order) {
-        orders.put(order.id(), order);
-    }
-
-    //Delete
-    @Override
-    public boolean removeOrder(int id) {
-        return orders.remove(id) != null;
-    }
-
-    @Override
-    public Order getOrderById(int id) {
-        return orders.get(id);
-    }
-
-    //Abrufen
-    @Override
-    public List<Order> getAllOrders() {
-        return List.copyOf(orders.values());
-    }
-}
-*/
