@@ -16,8 +16,9 @@ public class OrderMapRepo implements OrderRepoInterface {
     private final Map<Integer, Order> orders = new HashMap<>();
 
     @Override
-    public void addOrder(Order order) {
+    public Order addOrder(Order order) {
         orders.put(order.id(), order);
+        return order;
     }
 
     @Override

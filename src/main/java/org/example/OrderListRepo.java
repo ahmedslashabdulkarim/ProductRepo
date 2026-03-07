@@ -13,8 +13,9 @@ public class OrderListRepo implements OrderRepoInterface {
     }
 
     @Override
-    public void addOrder(Order neweOrder) {
-        orders.add(neweOrder);
+    public Order addOrder(Order newOrder) {
+        orders.add(newOrder);
+        return newOrder;
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface OrderRepoInterface {
 
-    void addOrder(Order order);
+    Order addOrder(Order order);
 
     boolean removeOrder(int id);
 

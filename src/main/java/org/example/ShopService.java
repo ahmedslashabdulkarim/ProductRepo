@@ -5,12 +5,17 @@
 
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 public class ShopService {
 
-    private final ProductRepo productRepo; // variable Type von ProductRepo. da ProductRepo ist die einzige Klasse, die mein Produkt‑Repository implementiert.
+    private final ProductRepo productRepo; // variable Type von ProductRepo. ProductRepo ist die einzige Klasse, die mein Produkt‑Repository implementiert.
 
     private final OrderRepoInterface orderRepo;
 
+    //Konstructor
     //public ShopService(ProductRepo productRepo, OrderListRepo orderRepo) {
     public ShopService(ProductRepo productRepo, OrderRepoInterface orderRepo) {
         this.productRepo = productRepo;
@@ -18,23 +23,19 @@ public class ShopService {
     }
 
     public void placeOrder(int orderId, int productId, int quantity) {
-
         // Produkt per ID suchen
         Product product = productRepo.getProductId(productId);
-
         // Prüfen, ob Produkt existiert
         if (product == null) {
             System.out.println("Produkt mit ID " + productId + " existiert nicht!");
             return;
         }
-
         // Preis berechnen
         double totalPrice = product.price() * quantity;
-
         // Order mit ProduktNAME erzeugen
         Order order = new Order(
                 orderId,
-                product.name(),   // <-- wichtig!
+                product.name(),
                 quantity,
                 totalPrice
         );
@@ -44,4 +45,7 @@ public class ShopService {
 
         System.out.println("Bestellung erfolgreich aufgegeben: " + order);
     }
+
+
+
 }
