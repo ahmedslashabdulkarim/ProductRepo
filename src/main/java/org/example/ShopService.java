@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class ShopService {
-//
+
     private final ProductRepo productRepo; // variable Type von ProductRepo. ProductRepo ist die einzige Klasse, die mein Produkt‑Repository implementiert.
 
     private final OrderRepoInterface orderRepo;
