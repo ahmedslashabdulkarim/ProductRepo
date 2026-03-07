@@ -7,9 +7,14 @@ public class OrderListRepo implements OrderRepoInterface {
 
     private final List<Order> orders = new ArrayList<>();
 
+    //getter- um unsere alle Bestellungen abzurufen.
+    public List<Order> getOrders(){
+        return orders;
+    }
+
     @Override
-    public void addOrder(Order order) {
-        orders.add(order);
+    public void addOrder(Order neweOrder) {
+        orders.add(neweOrder);
     }
 
     @Override
